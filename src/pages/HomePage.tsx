@@ -2,7 +2,7 @@
 import React from 'react';
 import FollowerCount from '../components/FollowerCount';
 import ProfileInfo from '../components/ProfileInfo';
-import RecentPosts from '../components/RecentPosts';
+// import RecentPosts from '../components/RecentPosts';
 const HomePage: React.FC = () => {
   return (
     // A container to center our content and add some padding
@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
           The stories behind the posts. The data behind the narrative.
         </p>
         <FollowerCount />
-        <RecentPosts />       
+        {/* <RecentPosts />        */}
       
       </div>
     </section>

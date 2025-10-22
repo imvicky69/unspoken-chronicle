@@ -40,9 +40,13 @@ const FollowerCount: React.FC = () => {
 
         setFollowers(instaData.followers_count);
 
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error("Failed to fetch followers:", err);
-        setError("Failed to load follower count.");
+        if (err instanceof Error) {
+          setError(err.message || "Failed to load follower count.");
+        } else {
+          setError("Failed to load follower count.");
+        }
       } finally {
         setIsLoading(false);
       }

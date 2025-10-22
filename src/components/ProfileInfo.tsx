@@ -36,9 +36,13 @@ const ProfileInfo: React.FC = () => {
 
         setProfile(instaData);
 
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.error("Failed to fetch profile info:", err);
-        setError("Failed to load profile info.");
+        if (err instanceof Error) {
+          setError(err.message || "Failed to load profile info.");
+        } else {
+          setError("Failed to load profile info.");
+        }
       } finally {
         setIsLoading(false);
       }
