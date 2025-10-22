@@ -1,0 +1,17 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can still keep your custom global styles and variables here if needed */
+body {
+  background-color: #0A192F; /* Our primary background color */
+  font-family: 'Lato', sans-serif; /* Our default body font */
+  color: #CCD6F6; /* Our secondary text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Our heading font */
+  color: #FFFFFF; /* Our primary text color */
+}
