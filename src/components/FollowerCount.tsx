@@ -64,11 +64,15 @@ const FollowerCount: React.FC = () => {
   }
 
   return (
-    <div>
-      <h2 className="text-lg text-gray-300">Current Followers</h2>
-      <p className="text-7xl font-bold text-[#64FFDA]">
+    <div className="mt-8">
+      <h2 className="text-lg text-gray-400 uppercase tracking-wider">Followers</h2>
+      <p className="text-7xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#64FFDA] to-blue-400 mt-2">
         {followers ? followers.toLocaleString() : 'N/A'}
       </p>
+      <div className="mt-4 flex items-center justify-center gap-2 text-green-400">
+        <span className="text-2xl">📈</span>
+        <span className="text-sm">Growing Daily</span>
+      </div>
     </div>
   );
 };
